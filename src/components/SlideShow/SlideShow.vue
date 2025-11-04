@@ -21,10 +21,10 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  position: fixed; /* ✅ reste collée au bord */
-  top: 160px;      /* adapte à la hauteur du header */
-  right: 40px;        /* ✅ colle complètement au bord droit */
-  bottom: 0;    /* laisse un peu d’espace pour le footer */
-  z-index: 900;    /* reste au-dessus de la carte si besoin */
+  position: fixed; 
+  top: 160px;      
+  right: 40px;        
+  bottom: 0;    
+  z-index: 900;    
 }
 </style>
