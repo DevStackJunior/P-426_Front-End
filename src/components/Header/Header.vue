@@ -1,11 +1,11 @@
 
 <script setup lang="ts">
-import Icone from './Icone.vue';
+import Icone from './IconeHeader.vue';
 import mapIcon from '../../assets/maps.png'
 import staticticsIcon from '../../assets/statistics.png'
 import  userIcon from '../../assets/user.png'
 import  UNESCO from '../../assets/UNESCO-Simbolo.png'
-import UnescoIcon from './UnescoIcon.vue';
+import UnescoIcon from './IconeUnesco.vue';
 </script>
 
 <template>
