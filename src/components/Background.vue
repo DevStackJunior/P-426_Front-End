@@ -1,43 +1,36 @@
-<script setup lang="ts">
-defineProps<{
-  background?: string // couleur / gradient / image
-  height?: string // hauteur de la bande
-  position?: 'top' | 'bottom' // emplacement de la bande
-}>()
-</script>
-
 <template>
   <div
     class="background-band"
-    :class="[position]"
     :style="{
-      '--band-bg': background || '#f3f3f3',
-      '--band-height': height || '120px',
+      backgroundImage: `url(${require('@/assets/img/background.png')})`,
+      top: position + 'px',
+      height: height,
     }"
   ></div>
 </template>
 
+<script>
+export default {
+  name: 'Background',
+  props: {
+    position: {
+      type: Number,
+      default: 0, // position verticale en pixels
+    },
+    height: {
+      type: String,
+      default: '200px', // hauteur de la bande
+    },
+  },
+}
+</script>
+
 <style scoped>
 .background-band {
+  position: absolute; /* pour positionner verticalement sur la page */
   width: 100%;
-  height: var(--band-height);
-  background: var(--band-bg);
-  background-size: cover; /* ajuste l'image à la bande */
-  background-position: center; /* centre l'image */
-  background-repeat: no-repeat; /* pas de répétition par défaut */
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-/* Position haute */
-.background-band.top {
-  top: 0;
-}
-
-/* Position basse */
-.background-band.bottom {
-  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>
