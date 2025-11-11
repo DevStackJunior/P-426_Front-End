@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import Header from './components/Header/Header.vue'
 import SlideShow from './components/SlideShow/SlideShow.vue';
+import Statistics from './components/Statistics/Profile.vue'
 </script>
 
 <template>
   <Header></Header>
   <SlideShow/>
+  <Statistics />
+
   <footer>@unesco</footer>
 </template>
 
