@@ -1,14 +1,15 @@
 <script>
-    import FlourishMap from "@/components/FlourishMap.vue";
-    
-    export default {
-      name: "HomePage",
-      components: { FlourishMap }
-    };
+import FlourishMap from '@/components/FlourishMap.vue'
+
+export default {
+  name: 'HomePage',
+  components: { FlourishMap },
+}
 </script>
+
 <template>
   <div class="home">
-    <FlourishMap visualisationId="25915215"/>
+    <FlourishMap visualisationId="25915215" />
   </div>
 </template>
 

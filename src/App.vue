@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import Home from './views/Home.vue'
 import Header from './components/Header/Header.vue'
+import Monument from './views/Monument.vue'
 </script>
 
 <template>
-  <Header></Header>
+  <Header />
 
-  <main>
-    coucou
-    <Home />
-  </main>
+  <!-- <Home /> -->
+
+  <Monument />
 </template>
 
 <style scoped>

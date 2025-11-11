@@ -2,7 +2,7 @@
   <div
     class="background-band"
     :style="{
-      backgroundImage: `url(${require('@/assets/img/background.png')})`,
+      backgroundImage: '../assets/img/background.png',
       top: position + 'px',
       height: height,
     }"
