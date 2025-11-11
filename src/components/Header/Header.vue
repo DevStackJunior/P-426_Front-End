@@ -10,10 +10,10 @@ import UnescoIcon from './IconeUnesco.vue';
 <template>
   <header class="header">
     <UnescoIcon :src="UNESCO" alt="Unesco" link="#"/>
-    <nav class="nav">
-      <Icone :src="mapIcon" alt="Map" link="#"/>
-      <Icone :src="staticticsIcon" alt="Stats" link="#"/>
-      <Icone :src="userIcon" alt="User" link="#"/>
+    <nav class="nav">      
+      <router-link to="/map"><Icone :src="mapIcon" alt="Map" link="#"/></router-link>
+      <router-link to="/stats"><Icone :src="staticticsIcon" alt="Stats" link="#"/></router-link>
+      <router-link to="/login"><Icone :src="userIcon" alt="User" link="#"/></router-link>
     </nav>
   </header>
 </template>

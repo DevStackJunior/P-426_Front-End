@@ -5,11 +5,16 @@ import Header from './components/Header/Header.vue'
 
 <template>
   <Header></Header>
+<<<<<<< Updated upstream
 
   <main>
     coucou
     <Home />
   </main>
+=======
+  <router-view />
+  <footer>@unesco</footer>
+>>>>>>> Stashed changes
 </template>
 
 <style scoped>
