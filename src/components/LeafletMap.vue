@@ -26,24 +26,28 @@ export default {
     this.addMarkers(staticSites);
   },
   methods: {
-    addMarkers(sites) {
-      sites.forEach(site => {
-        const icon = L.icon({
-          iconUrl: `/icons/${site.icon || "default.svg"}`, // fallback
-          iconSize: [32, 32],
-          iconAnchor: [16, 32],
-          popupAnchor: [0, -32]
-        });
+addMarkers(sites) {
+  sites.forEach(site => {
+    const icon = L.icon({
+      iconUrl: `/icons/${site.icon || "default.svg"}`,
+      iconSize: [40, 40],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32],
+      className: 'marker-with-shadow'
+    });
 
-        L.marker([site.lat, site.lng], { icon })
-          .addTo(this.map)
-          .bindPopup(`<b>${site.name}</b>`);
-      });
-    }
+    L.marker([site.lat, site.lng], { icon })
+      .addTo(this.map)
+      .bindPopup(`<b>${site.name}</b>`);
+  });
+}
   }
 };
 </script>
 
 <style scoped>
-/* Leaflet CSS importée depuis le JS */
+.marker-with-shadow {
+  filter: drop-shadow(0 0 3px black);
+}
+
 </style>
