@@ -1,15 +1,15 @@
 <script>
-    import FlourishMap from "@/components/FlourishMap.vue";
+    import LeafletMap from "@/components/LeafletMap.vue";
     import SlideShow from '@/components/SlideShow/SlideShow.vue';
     export default {
       name: "HomePage",
-      components: { FlourishMap, SlideShow }
+      components: { LeafletMap, SlideShow }
     };
 </script>
 <template>
   <div class="home">
     <SlideShow />
-    <FlourishMap visualisationId="25915215"/>
+    <LeafletMap visualisationId="25915215"/>
   </div>
 </template>
 
