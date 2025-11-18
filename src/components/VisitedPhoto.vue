@@ -1,21 +1,12 @@
 <template>
   <div class="visited-photo">
     <div class="photos" role="group" aria-label="Photos">
-      <img class="large" src="../assets/img/s.png" :alt="largeAlt" loading="lazy" />
+      <img v-if="largeSrc" class="large" :src="largeSrc" :alt="largeAlt" loading="lazy" />
 
       <div class="small-stack">
-        <img class="small top" src="../assets/img/s.png" :alt="smallTopAlt" loading="lazy" />
-        <img class="small bottom" src="../assets/img/s.png" :alt="smallBottomAlt" loading="lazy" />
+        <img v-if="smallTopSrc" class="small top" :src="smallTopSrc" :alt="smallTopAlt" loading="lazy" />
+        <img v-if="smallBottomSrc" class="small bottom" :src="smallBottomSrc" :alt="smallBottomAlt" loading="lazy" />
       </div>
-    </div>
-
-    <div class="text-area">
-      <slot name="title">
-        <h3 class="title">{{ title }}</h3>
-      </slot>
-      <slot name="content">
-        <p class="content">{{ content }}</p>
-      </slot>
     </div>
   </div>
 </template>
@@ -65,91 +56,64 @@ export default defineComponent({
 <style scoped>
 .visited-photo {
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  border: black 1px solid;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .photos {
   display: flex;
-  gap: 0.5rem;
-  align-items: stretch;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .photos img {
   display: block;
-  width: 20%;
-  height: 20%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .large {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 400px;
   flex-shrink: 0;
 }
 
 .small-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: space-between;
-  border: red 1px solid;
+  gap: 1rem;
 }
 
 .small {
-  width: 160px;
-  height: 156px;
+  width: 180px;
+  height: 195px;
   flex-shrink: 0;
-}
-
-.text-area {
-  flex: 1;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.title {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.content {
-  margin: 0;
-  line-height: 1.6;
-  color: var(--text-muted, #555);
 }
 
 /* Responsive: stack vertically on narrow screens */
 @media (max-width: 800px) {
   .visited-photo {
     flex-direction: column;
-    border: black 1px solid;
   }
 
   .photos {
-    flex-direction: row;
+    width: 100%;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .large {
-    width: 100%;
-    max-width: 420px;
-    height: 260px;
+    width: 180px;
+    height: 180px;
   }
 
   .small {
     width: 120px;
-    height: 120px;
-  }
-
-  .text-area {
-    max-width: 100%;
+    height: 80px;
   }
 }
 </style>

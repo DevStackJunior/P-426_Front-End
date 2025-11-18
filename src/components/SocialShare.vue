@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 60px;
   /* margin-top: 40px; pushes the icons down */
   justify-content: center;
   /* font-size is not needed for images, you control size via width/height */
