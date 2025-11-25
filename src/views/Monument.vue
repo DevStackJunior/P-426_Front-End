@@ -27,9 +27,9 @@ export default {
   <section class="monument-section">
     <div class="monument-content">
       <VisitedPhoto 
-        large-src="/src/assets/img/spoo1.jpg"
-        small-top-src="/src/assets/img/spoo2.png"
-        small-bottom-src="/src/assets/img/s.png"
+        large-src="/src/assets/img/1.jpg"
+        small-top-src="/src/assets/img/2.jpg"
+        small-bottom-src="/src/assets/img/3.jpg"
       />
       
       <MonumentInfo 
